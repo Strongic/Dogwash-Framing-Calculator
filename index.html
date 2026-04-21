@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Pallet and Wall Calculator</h1>
+    <p>Each option shows the requirements for an entire crate:</p>
+
+    <div class="options">
+        <button onclick="selectOption('DW2 Wall')">DW2 Wall (2x)</button>
+        <button onclick="selectOption('DW2 Pallet')">DW2 Pallet</button>
+        <button onclick="selectOption('Mini Wall')">Mini Wall (2x)</button>
+        <button onclick="selectOption('Mini Pallet')">Mini Pallet</button>
+
+    </div>
+
+    <div id="calculator-input" style="display:none;">
+        <h3 id="selected-item-name"></h3>
+        <label for="quantity">How many units are you building?</label>
+        <input type="number" id="quantity" value="1" min="1">
+        <button onclick="performCalculation()">Calculate Materials</button>
+    </div>
+
+    <hr>
+
+    <div id="result">
+        <p>Select an option above.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
